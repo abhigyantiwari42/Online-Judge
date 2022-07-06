@@ -1,0 +1,23 @@
+{% extends 'practice/base.html'%}
+
+{% block content%}
+<table class="table" class="table-responsive">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Probid</th>
+        <th scope="col">Verdict</th>
+        <th scope="col">submissiontime</th>
+      </tr>
+    </thead>
+    <tbody>
+        {%for solution in solutions%}
+        <tr>
+            <td>{{solution.problemid}}</td>
+            <td>{{solution.verdict}}</td>
+            <td>{{solution.submissiontime}}</td>
+        </tr>
+        {% endfor %} 
+    </tbody>
+  </table>
+   
+{%endblock%}

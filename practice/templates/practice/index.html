@@ -1,0 +1,15 @@
+{% extends 'practice/base.html' %}
+
+{% block content %}
+
+{% if Problem_list %}
+    <ul>
+    {% for problem in Problem_list %}
+        <li><a href="{% url 'practice:detail' problem.problemid %}">{{ problem.description }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+{% endblock %}
